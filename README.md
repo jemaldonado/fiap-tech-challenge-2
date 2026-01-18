@@ -16,26 +16,9 @@ A orquestração entre as camadas é feita via eventos S3 e AWS Lambda.
 
 2. ARQUITETURA
 --------------
-Fluxo principal:
 
-Fonte de Dados
-   ↓
-Glue Job RAW (Spark)
-   ↓
-S3 Raw (Parquet particionado por dt)
-   ↓
-Arquivo de controle (_READY.json)
-   ↓
-Evento S3
-   ↓
-AWS Lambda
-   ↓
-Glue Job REFINED (Spark)
-   ↓
-S3 Refined (Parquet particionado por dt e ticker)
-   ↓
-Athena
 
+![Alt text](img/arquitetura-fiap.jpg?raw=true "Title")
 
 
 3. CAMADA RAW
